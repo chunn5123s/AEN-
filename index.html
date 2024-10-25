@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHONG THẦN BẢNG</title>
+  <link rel="icon" type="image/x-icon" href="/img/penis_15442070.png">
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+  <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C1.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>MUAY THÁI</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C2.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>MÁT TƠ CHÉP</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C3.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>TÀI LỘC QUÁ LỚN</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C4.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>SONG LONG</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C5.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>SẾP TÙNG</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C6.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>QUÃNG DÂM ĐỈ</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C7.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>BÉ TRIẾT</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C8.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>TAM TAI</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C9.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>XXX</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="./img/C10.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>DM TỤI M</h2>
+        </div>
+      </div>
+    </div>
+    <div class="slider__nav" style="display: flex;justify-content: center;">
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
+
